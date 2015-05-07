@@ -1,0 +1,8 @@
+ifconfig eth0 192.167.5.2 netmask 255.255.255.0 broadcast 192.167.5.255 up
+route add default gateway 192.167.5.1
+/etc/init.d/ssh start
+cd /etc/openvpn/2.0
+source ./vars
+./clean-all
+./build-req hostMilano
+scp /etc/openvpn/2.0/keys/hostMilano.csr CA@115.15.15.2:/etc/openvpn/2.0/keys/

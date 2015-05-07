@@ -1,0 +1,2 @@
+ifconfig eth0 120.30.0.2 netmask 255.255.255.0 broadcast 120.30.0.255 up
+route add default gateway 120.20.0.3

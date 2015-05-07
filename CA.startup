@@ -1,0 +1,7 @@
+ifconfig eth0 115.15.15.2 netmask 255.255.255.252
+route add default gateway 115.15.15.1
+/etc/init.d/ssh start
+cd /etc/openvpn/2.0
+source ./vars
+./clean-all
+./build-ca

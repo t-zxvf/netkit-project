@@ -1,0 +1,8 @@
+ifconfig eth0 192.168.1.2 netmask 255.255.255.0 broadcast 192.168.1.255 up
+route add default gw 192.168.1.1
+/etc/init.d/ssh start
+cd /etc/openvpn/2.0
+source ./vars
+./clean-all
+./build-req-server server_back_and
+scp /etc/openvpn/2.0/keys/server_back_end.csr CA@115.15.15.2:/etc/openvpn/2.0/keys/

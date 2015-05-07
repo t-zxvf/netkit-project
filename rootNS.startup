@@ -1,0 +1,3 @@
+ifconfig eth0 172.168.40.1 netmask 255.255.255.252  broadcast 172.168.40.3 up
+route add default gateway 8.2.2.1
+/etc/init.d/bind start
